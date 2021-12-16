@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <header class="masthead" style="background-image: url('static/img/star-sky.jpg');">
+        <div class="container">
+            <div class="intro-text" style="height: 1022px;padding: 100px 0px 50px;">
+                <div class="intro-lead-in"><span><strong>Restaurar</strong><br></span></div>
+                <div class="intro-heading text-uppercase" style="height: 525px;">
+                    <section class="login-dark" style="height: 525px;padding: 6px 0px;">
+                        <form action="/send" method="POST" style="margin: 50px 0px;">
+                            <h2 class="sr-only">Login Form</h2>
+                            <div class="illustration"><i class="icon ion-arrow-return-left"></i></div>
+                            <p style="font-size: 17px;font-family: Montserrat, sans-serif;">Email para restaurar</p>
+                            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+                            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Enviar</button></div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </header>
+    {% endblock %}

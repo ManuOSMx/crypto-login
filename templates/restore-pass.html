@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <header class="masthead" style="background-image: url('/static/img/star-sky.jpg');">
+        <div class="container">
+            <div class="intro-text" style="height: 1022px;padding: 100px 0px 50px;">
+                <div class="intro-heading text-uppercase" style="height: 525px;">
+                    <section class="login-dark" style="height: 525px;padding: 6px 0px;">
+                        <form action="/update/{{user.0}}" method="post" style="margin: 50px 0px;">
+                            <h2 class="sr-only">Login Form</h2>
+                            <div class="illustration"><i class="icon ion-arrow-return-left"></i></div>
+                            <div class="form-group">
+                                <p style="font-size: 17px;font-family: Montserrat, sans-serif;">Restaurar contraseña</p>
+                                <p style="font-size: 12px;font-family: Montserrat, sans-serif;">Usuario</p>
+                                <input class="form-control" type="email" name="email" placeholder="Usuario" value="{{ user.1 }}" style="padding: 21px 12px;">
+                                <p style="font-size: 12px;font-family: Montserrat, sans-serif;">Contraseña</p>
+                                <input class="form-control" type="password" name="password" placeholder="Nueva Contraseña" style="padding: 27px 12px;">
+                                <input class="form-control" type="password" name="passwordConf" placeholder="Confirmar Contraseña" style="margin: 13px 0px;">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block" type="submit">Restaurar</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}

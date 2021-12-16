@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <header class="masthead" style="background-image: url('static/img/star-sky.jpg');">
+        <div class="container">
+            <div class="intro-text" style="height: 1022px;padding: 100px 0px 50px;">
+                <div class="intro-lead-in"><span><strong>Registro</strong></span></div>
+                <div class="intro-heading text-uppercase" style="height: 525px;">
+                    <section class="login-dark" style="height: 418px;padding: 6px 0px;">
+                        <form action="/add_user" method="post" style="margin: 50px 0px;">
+                            <h2 class="sr-only">Login Form</h2>
+                            <div class="illustration"><i class="icon ion-android-people"></i></div>
+                            <div class="form-group">
+                                <p style="font-size: 17px;font-family: Montserrat, sans-serif;">Nuevo usuario</p>
+                                <p style="font-size: 12px;font-family: Montserrat, sans-serif;">Usuario</p><input class="form-control" type="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <p style="font-size: 12px;font-family: Montserrat, sans-serif;">Contraseña</p><input class="form-control" type="password" name="password" placeholder="Contraseña"><input class="form-control" type="password" name="passwordConf" placeholder="Confirmar Contraseña">
+                            </div>
+                            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Registrarme</button></div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}

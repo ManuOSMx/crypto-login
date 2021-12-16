@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <header class="masthead" style="background-image: url('static/img/star-sky.jpg');">
+        <div class="container">
+            <div class="intro-text" style="height: 1022px;padding: 100px 0px 50px;">
+                <div class="intro-lead-in"><span><strong>Practica de Control de Acceso</strong></span></div>
+                <div class="intro-heading text-uppercase" style="height: 525px;">
+                    <section class="login-dark" style="height: 525px;padding: 6px 0px;">
+                        <form action="/login" method="POST" style="margin: 50px 0px;">
+                            <h2 class="sr-only">Login Form</h2>
+                            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+                            <div class="form-group">
+                                <p style="font-size: 12px;font-family: Montserrat, sans-serif;">Usuario</p>
+                                <input class="form-control" type="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <p style="font-size: 12px;font-family: Montserrat, sans-serif;">Contraseña</p>
+                                <input class="form-control" type="password" name="password" placeholder="Password">
+                            </div>
+                            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Entrar</button>
+                                <a href="/register" style="color: white"><div class="btn btn-primary btn-block">Registrarme</div></a>
+                            </div><a data-bss-hover-animate="bounce" class="forgot" href="restore" style="height: 47.8px;"><span style="text-decoration: underline;">¡Olvide mi contraseña!</span></a>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}
