@@ -7,7 +7,7 @@ Se creó un HTML para ver los datos registrados, lo puedes ver en:
 
 **table.html**
 
-Puedes acceder a la vista y funcionamiento de este proyecto en: https://cryp-log.herokuapp.com/ - [Github](https://cryp-log.herokuapp.com/) 
+Puedes acceder a la vista y funcionamiento de este proyecto en: [https://cryp-log.herokuapp.com/](https://cryp-log.herokuapp.com/) 
 
 ### Descargar proyecto con Git:
 
